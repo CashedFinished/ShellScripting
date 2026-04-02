@@ -1,0 +1,35 @@
+Section 1 : 
+
+Listing files /& directories with "ls"
+
+You can pass flags to the list (ls) command such as:
+
+    " -F " to append a character indicator to each file name based on its type.
+        " / " indicates that ___/ is a directory. 
+        " * " indicates that __* is an executable. 
+        " @ " indicates that ___@ is a symbolic-link. 
+        Regular files will be displayed as their file type. For Example: .txt or .py
+
+    " -a " or " -A " Can display ALL files and directories, including the hidden ones.
+        You will also see "." & ".." to represent the current-directory & the parent-directory. 
+        " A " will display all files & directories (including hidden ones), but exclude "." & ".." 
+    
+    " -l " Is a flag that's used to change displayed output. 
+    You'll use it to display a long-format of files/ directories instead of the default horizontal method.
+    Not only is it in long-format but it displays more details such as:
+        •	Last Modification Date
+        •	User-Ownership
+        •	Access Permissions
+        •	File Type
+        •	Amount of memory it possesses.
+    
+    " -d " Tells the listing command 'Don’t go inside directories — just show the directory itself.'
+    If you were to "ls a_folder" , linux will display the content of the folder by default.
+    However "ls -d a_folder" will display the metadata of the folder. 
+    It can be useful for:
+      Checking permissions of directories
+      Avoiding huge output when dealing with nested folders
+
+
+                     
+

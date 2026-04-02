@@ -1,0 +1,48 @@
+Section 1.3 
+
+Concatenation ---> " cat "
+
+You can use this command with multiple files & the output would be
+both of those file concatenated. However, in everyday Bash use it’s mostly the show me the contents of a file comman. 
+Printing everything inside __.txt file to be viewed in the terminal. 
+
+" -n " This is a flag that can be passed to display a numbered-sequence of each line of the file.
+If you concatenate multiple files, the line-count will restart at the beginning of the new file. 
+
+You can use the " cat " command without passing any files to it,
+allowing you to type in the terminal as if it's a text editor.
+Whatever you type, gets directly echoed back to the terminal line-by-line but not saved.
+
+Concatenation can also be used to create files manually, using " cat " followed by a " > __.(filetype) "
+The greater-than sign essentially redirects the " cat " command to the destination you want to store the content.
+To exit from this "terminal text-editor" you'll CTRL - D or CTRL - C to get back to the terminal prompt.
+
+------------------------------------------------------------------------------------------------------------------
+
+" more "
+
+This is used to view text one screen at a time, preventing terminal clutter 
+Instead of dumping the whole file at once, more pauses page by page so you can read it gradually.
+It unlocks a easier page Navigation & Basic Controls:
+    Space = Next Page
+    Enter = Next Line
+    q = Quit
+
+" less " 
+
+Similar to " more " but ironically it gives you more options for basic controls. 
+They allow you to open the file(s) for reading without dumping it all at once
+Invoking this command, takes you to a interactive Viewing Interface (seperate from terminal) where the file is displayed and you can navigate inside it.
+Once you're in the interactive viewing interface, You can also search for keywords in the file by using the " / " followed by the word. 
+
+Navigation & Basic Controls: 
+    Space = next page
+    b = previous page
+    g = go to top
+    G = go to bottom
+    q = quit
+
+When Searching for a word: 
+    n = next match
+    N = previous match
+

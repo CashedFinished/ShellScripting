@@ -1,0 +1,48 @@
+Section 1.2
+
+Copy ----> " cp "
+Copy this thing → and place it over there
+
+"cp [options] {source} {destination}"
+for example: cp data.txt backupdata.txt 
+
+*|* These flags also behave the same with just about every other bash command *|*
+
+" -v " flag is used for VERBOSE output. Which shows you the changes made/
+For Example: data.txt -> backupdata.txt 
+
+
+" -r " By default, you will not be allowed to copy a directory. 
+Instead you'll need the RECURSIVE flag to force the copy. 
+If the directory has content, it will copy the contents of the folder as well. 
+Very useful for:
+     Duplicating project directories
+     Copying configs across environments
+
+" -i " Is referred to as the Interactive-Mode &  it's mostly used as a safety measure.
+It will prompt you to confirm before deleting / changing. Preventing accidental overwrites
+or protecting important files i.e; config files.
+ For Example; overwrite 'backupdata.txt'? (y/n) 
+
+-------------------------------------------------------------------------------------------
+
+Move ----> " mv " 
+
+Move works similar to the copy command (as in syntax). 
+However copy will create a duplicate, move will relocate or rename a file / directory.
+Copy can also rename a file (as a duplicate) but the original file /directory will remain.  
+For Example;
+        cp file.txt new.txt   # duplicate with new name
+        mv file.txt new.txt   # rename (no duplicate)
+Move will allow you (by default) to move a directory without the -r flag. 
+
+
+Remove ----> " rm "
+
+Remove works exactly as it sounds, most of the flags previously-mentioned behave the same. 
+" -r " works the same as the copy command as well as the " -i " flag & " -v ". 
+However " -f " can be used to force deletion & avoid being prompted with warnings. 
+Commands like the one below has ended careers:
+    rm -rf something/
+Its best to be cautious when removing anything in a production environment. 
+Once the rm command is used with something, its gone for good & not recoverable. 

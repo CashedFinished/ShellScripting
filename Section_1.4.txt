@@ -1,0 +1,43 @@
+Section 1.4
+
+" echo "
+
+Mostly used to write text to standard output, which usually means printing to the terminal.
+This is almost a direct match to the "print" statement in python. 
+However " echo "writes to stdout, therefore you can also redirect it elsewhere.
+
+Redirection: 
+
+echo "Hello" > file.txt # This will write to " file.txt "
+echo "Hello again" >> file.txt # This syntax will append to that existing file.
+
+" e " 
+
+Using " echo " followed by this flag will allow the terminal to interpret special escapes.
+Usually you'll see " \n " being used to create a new line but without " e ", 
+The terminal will treat it just as text. 
+For Example; echo -e "Jamar \nParker
+    Output:
+        Jamar
+        Parker
+ 
+
+" \v " = Vertial-Tab 
+Using this flag with the " echo " command, adds vertical spacing, 
+Though in modern terminals it often behaves oddly or looks similar to a newline.
+Very few people use it in normal Bash scripting, as they tend to opt for " \n " or " \t "
+Depending on the terminal, it may:
+
+	•	Move down vertically
+    •	Act almost like a line break
+    •	Not display in a very noticeable way
+
+
+" \t " = Horizontal-Tab
+Similar to veritcal-tab, it helps to format the output so it is easier to read
+You'll find this option handy when lining up labels and values
+For Example: "echo -e "User:\tjay\nShell:\tbash\nHome:\t/home/jay"
+    Outputs: User:   jay
+             Shell:  bash
+             Home:   /home/jay
+

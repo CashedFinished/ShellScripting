@@ -1,0 +1,16 @@
+Section 1.1 
+
+" cd " = Change Directory
+
+*|* No Mater where you are in the filesystem. "cd" alone will revert you back to your " ~ " home folder *|*
+
+This command is used to navigate through your filesystem. 
+You'll typically use it followed by the relative path that you want to go to.
+For Example : cd /user/Desktop/sub-folder1/sub-folder2/___.txt
+I has a few useful flags that can be used to change. 
+
+" - " This is used as a shortcut to teleport back to your previous directory. 
+Using the example, lets assume you began at /user/Desktop. Using "cd -" with this flag
+will revert you back to your original position faster that " cd ." or " cd .. "
+
+" ~ " You'll use this to change to your "Home" directory. 
