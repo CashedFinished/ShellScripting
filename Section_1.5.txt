@@ -1,0 +1,84 @@
+Section 1.5
+
+Wilds Cards
+Wildcards are special characters that stand in for filenames or groups of characters when you work in the shell.
+
+
+* ---> Any Character
+
+    # List all .txt files
+        ls -l *.txt
+    # The terminal will interpret this as:
+        ls notes.txt todo.txt
+
+    # List all files that begin with "d", regardless of the file type
+        ls -l d*
+    # The terminal will interpret this as:
+        ls -l data.py discovery.txt dusterhoff.mp4
+
+
+
+-----------------------------------------------------------------------------------------------------------------
+
+? ---> Represents any single character
+
+    # List all two character .txt files
+        ls -l ??.txt
+    # The terminal will interpret this as
+        ls aa.txt bb.txt
+
+[] ---> Bracket Expression / Character Class
+
+It lets you match one character from a specific set or range.
+When pairing it with the " * " any character wildcard, it gives you more control for filtering files.
+
+    # List file1.txt | file2.txt | & file3.txt
+        ls -l file[1-3].txt
+        output:
+            file1.txt
+            file2.txt
+            file3.txt
+    
+    # List all files beginning with "j" , "d" or "t"
+        ls -l [jdt]* 
+        output:
+        	job.txt
+            dog.txt
+            test.sh
+
+    # List all files with "a" , "b",  or "c" as the first character & "b" as the second character
+        ls -l [a][b]*
+        output:
+            ab
+            abc.txt
+            about.log
+            absolute
+            ab123
+
+----------------------------------------------------------------------------------------------------------------
+
+! ---> Exclude Character
+
+This character can be used with bracket expressions in Bash,
+But not by itself as a standalone wildcard like " * " or " ? "
+
+    # List files that start with any character NOT " a " , " b " or " c "
+        ls -l [!abc]*
+        output:
+            dog.txt
+            zebra.jpg
+            test.py
+
+-----------------------------------------------------------------------------------------------------------------
+
+[[:digit:]] | [[:alpha:]] | [[:lower:]] | etc ---->  POSIX character classes
+They are used inside bracket expressions to match categories of characters like digits, letters, lowercase, uppercase, and more.
+
+    #List all files that begin with a number, regardless of filetype
+        ls [[:digit:]]*
+        output:
+            1notes.txt
+            2026_report.pdf
+            7days.sh
+            9
+
