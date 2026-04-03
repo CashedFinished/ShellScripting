@@ -1,0 +1,62 @@
+Section 1.6
+
+Variables 
+
+You'll set variables in the terminal simply as is ex; ' name=Jamar '
+However, in order to access the variable, you can simply ' echo $name ' to access it.
+A more precise way of calling variables is to place {} around the variable to avoid syntax errors & confusion
+It's important to leave no-spaces when declaring variables.
+Leaving a space (name = Jamar), Bash will just interpret ' name ' as a command and not a variable declaration. 
+You would see " command not found "
+
+#List ' name ' variable
+    echo $name
+        output:
+            Jamar
+
+#Append to the ' name '
+    echo ${name} Parker
+        output:
+            Jamar Parker
+
+I would obtain a syntax error if I attempted to append to the variable without using curly brackets. 
+Its also important to note, you'll have to redfine the variable for the append to save.
+If not, It will just appear as stdout when echo'd but if you echo the variable again it will not display 
+
+#Correct way of appending to a variable
+    name=${name}Parker
+        output:
+            JamarParker
+
+
+--------------------------------------------------------------------------------------------------------------
+' unset ' ---> Erases the content of a given variable 
+
+    unset name 
+    The above command will ensure that ' echo ${name} ' returns nothing. 
+
+You can check the length of a declared variable by using the ' # " sign when calling the variable
+
+For Example; 
+    echo ${#name}
+        output:
+            11
+
+---------------------------------------------------------------------------------------------------------------
+
+Indexing 
+
+#Start at index position 4 & only return 1 character 
+    echo ${name:4:1}
+        output:
+            rParker
+It also works with negative numbers, meaning -2 would return the last two characters of the variable.
+Also important to note that, you must provide a space inbetween the colon & negative number or
+you'll just return the entire variable. 
+
+For Example;
+    echo ${name: -3}
+        output:
+            ker
+            
+-----------------------------------------------------------------------------------------------------------------
